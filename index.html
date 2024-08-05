@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    body {
+      height: 100vh;
+      font-family: hanken grotesk;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 10%;
+    }
+
+    .result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color:hsla(256, 72%, 46%, 1) ;
+      border-radius: 0 0 9% 9%;
+      padding: 10%;
+    }
+
+    .title {
+      font-size: 18px;
+      color: white;
+    }
+
+    .circle {
+      background-image: linear-gradient(hsla(241, 72%, 46%, 1) , hsla(256, 72%, 46%, 0.9));
+      background-color: aliceblue;
+      padding: 0 15%;
+      border-radius:50% ;
+      line-height: 20px;
+    }
+
+    .circle :nth-child(1){
+      font-size: 44px;
+      color: white;
+    }
+
+    .circle :nth-child(2){
+      color: lightgrey;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    .summary {
+      padding: 0 5%;
+    }
+
+    .description {
+      color: lightgrey;
+    }
+
+    .reaction {
+      display: flex;
+      background-color: hsl(0, 100%, 67%, 0.1);
+      border-radius: 10px;
+      padding: 0 10%;
+    }
+
+    .red {
+      color: red;
+      flex-grow: 1;
+    }
+
+    .memory {
+      display: flex;
+      background-color: hsl(39, 100%, 56%, 0.1);
+      border-radius: 10px;
+      padding: 0 10%;
+    }
+
+    .yellow {
+      color: hsl(39, 100%, 56%);
+      flex-grow: 1;
+    }
+
+    .verbal {
+      display: flex;
+      background-color: hsl(166, 100%, 37%, 0.1);
+      border-radius: 10px;
+      padding: 0 10%;
+    }
+
+    .aqua {
+      color: hsl(166, 100%, 37%);
+      flex-grow: 1;
+    }
+
+    .visual {
+      display: flex;
+      background-color: hsl(234, 85%, 45%,0.1);
+      border-radius: 10px;
+      padding: 0 10%;
+    }
+
+    .blue {
+      color: hsl(234, 85%, 45%);
+      flex-grow: 1;
+    }
+
+
+    .continue {
+      background-color: hsl(224, 30%, 27%);
+      border-radius: 25px; 
+    }
+
+    .continue p {
+      color: white;
+      text-align: center;
+      padding: 5%;
+    }
+
+    .continue:hover {
+      cursor: pointer;
+      background-color: hsl(241, 81%, 54%);
+    }
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  padding: 5%;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+@media (min-width: 768px) {
+
+  body {
+    /* width: 100vh; */
+  }
+  .card {
+    position: absolute;
+    flex-direction: row;
+    height: 500px;
+    width: 600px;
+    top: calc(50% - 250px);
+    left: calc(50% - 300px);
+  }
+
+  .result {
+    border-radius: 25px;
+    flex-basis: 300px;
+  }
+
+  .circle {
+    padding: 2% 25%;
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 300px;
+  }
+
+  .continue {
+    height: 10%;
+    line-height: 5%;
+    padding: 1%;
+  }
+
+  .attribution {
+    position: absolute;
+    top: 600px;
+    left: 30%;
+    
+  }
+
+
+
+}
+  </style>
+</head>
+<body>
+
+<section class="card">
+  <div class="result">
+  <p class="title">Your Result</p>
+  <div class="circle">
+  <p><b>76</b></p>
+  <p>of 100</p>
+  </div>
+
+  <h2>Great </h2>
+  <p class="description">You scored higher than 65% of the people who have taken these tests.</p>
+  </div>
+
+  <div class="summary">
+  <h4>Summary</h4>
+
+  <div class="reaction">
+  <img src="assets/images/icon-reaction.svg" alt="">
+  <p class="red">Reaction</p>
+  <p><b>80</b> / 100</p>
+  </div>
+
+  <div class="memory">
+  <img src="assets/images/icon-memory.svg" alt="">
+  <p class="yellow">Memory</p>
+  <p><b>92</b> / 100</p>
+  </div>
+
+  <div class="verbal">
+    <img src="assets/images/icon-verbal.svg" alt="">
+  <p class="aqua">Verbal</p>
+  <p><b>61</b> / 100 </p>
+  </div>
+
+  <div class="visual">
+    <img src="assets/images/icon-visual.svg" alt="">
+  <p class="blue">Visual</p>
+  <p><b>72</b> / 100 </p>
+  </div>
+
+  <div class="continue">
+  <p>Continue</p>
+  </div>
+  </div>
+</section>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kasia Gajderowicz</a>.
+  </div>
+</body>
+</html>
